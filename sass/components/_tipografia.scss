@@ -1,5 +1,12 @@
 /* TIPOGRAFIA */
+html{
+  font-family: sans-serif;
+  font-size: map-get($font, base);
+  color: map-get($coloresBasicos, texto);
+}
+
 .main {
     &__titulo {
+      font-size: map-get($font, h4 );
     }
   }

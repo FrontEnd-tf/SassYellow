@@ -1,17 +1,53 @@
 /* FORMULARIO */
 .main {
-    &__formulario {
+  &__formulario {
+    input {
+      @include inputFormat();
     }
+    // posicionamiento
+    grid-column: 1/4;
+    grid-row: 2/3;
+
+    // SubGrid 2columnas 6filas
+    display: grid;
+    grid-template: {
+      columns: 1fr 0.6fr 0.4fr;
+      rows: auto 50px repeat(4, auto);
+      areas: 
+      "label01 inputEmail ." 
+      ". . ." 
+      "label02 inputNombre ." 
+      ". inputApellidos ."
+      ". inputDireccion ." 
+      ". botonEnviar .";
+    }
+    row-gap: 1rem;
+    column-gap: 4rem;
   }
-  .formulario {
-    &__correo {
-    }
-    &__nombre {
-    }
-    &__apellidos {
-    }
-    &__direccion {
-    }
-    &__enviar {
-    }
+}
+.formulario {
+  &__labelEmail {
+    grid-area: label01;
+    justify-self: end;
   }
+  &__correo {
+    grid-area: inputEmail;
+  }
+  &__labelNombre {
+    grid-area: label02;
+    justify-self: end;
+  }
+  &__nombre {
+    grid-area: inputNombre;
+  }
+  &__apellidos {
+    grid-area: inputApellidos;
+  }
+  &__direccion {
+    grid-area: inputDireccion;
+  }
+  &__enviar {
+    grid-area: botonEnviar;
+    justify-self: end;
+  }
+}

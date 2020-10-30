@@ -1,6 +1,10 @@
 /* LAYOUTS */
+body{
+  background-color: map-get($coloresBasicos, fondo);
+}
 .main {
     &__rectangulo {
+      background-color: map-get($coloresBasicos, rectangulo);
       &--pos01 {
       }
       &--pos02 {
