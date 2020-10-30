@@ -1,0 +1,22 @@
+/* VARIABLES */
+// COLORES
+// Colores básicos
+$coloresBasicos: (
+  fondo: #f8d044,
+  rectangulo: #d1af38,
+  texto: #6d5b1c,
+  placeholder: #c1c1c1,
+  textoBoton: #463939,
+);
+
+// TAMAÑOS
+// Tipografia
+$font: (
+  base: 16px,
+  // base de todos los navegadores
+  h4: 5.813rem,
+  // titulo
+  h5: 3.188rem,
+  // suscribete
+  input: 1.25rem // input, button y placeholder,,
+);
